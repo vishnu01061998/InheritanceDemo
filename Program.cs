@@ -10,16 +10,29 @@ namespace InheritanceDemo
     {
         public static void Main(string[] args)
         {
+            Teacher teacher= new Teacher();
+            teacher.GetData();
+            teacher.PutData();
+            
+
+                
 
             Child C = new Child();
-            parent p = new parent();
+
+            int result = 10;
+
+            C.function4(result);  // Actual parameters
+
+            parent p = new parent(10);
 
 
             Child c1;
             parent p1;
+            
 
-            // c1= p; // invalid
-            p1 = C;  // Valid
+
+            //c1= p; // invalid
+              p1 = C;  // Valid
 
             // p1 is the variable of parent class but its the refernce of child class
 

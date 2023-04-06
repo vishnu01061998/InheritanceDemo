@@ -10,6 +10,7 @@ namespace InheritanceDemo
     {
         public void GetData()
         {
+            Console.WriteLine();
         }
         public void PutData()
         {
@@ -30,9 +31,9 @@ namespace InheritanceDemo
     internal class parent
     {
 
-        public parent()  // constructor
+        public parent(int id)  // constructor
         {
-            this.Id = 10;
+            this.Id = id;
         }
         // Data member
         public int Id { get; set; }
@@ -50,11 +51,11 @@ namespace InheritanceDemo
     }
     internal class Child : parent
     {
-
+      
         // constructor
-        public Child()
+        public Child() : base(20)
         {
-              this.Name  = "Vaish";
+            this.Name = "Vaish";
         }
 
          // date members
@@ -72,27 +73,11 @@ namespace InheritanceDemo
             
 
         }
-        public void function4(int num1, int num2, string operation)  //Formal paramters
+        public void function4(int num)  //Formal paramters
         {
-
-            if (operation == "Add")
-            {
-                int result = num1 + num2;
-            }
-
-
-            if (operation == "Sub")
-            {
-                int result = num1 - num2;
-            }
-
 
             Console.WriteLine("Child class function 4 ");
         }
 
-        
-        
-           
-        
     }
 }
